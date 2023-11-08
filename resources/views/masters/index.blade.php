@@ -32,20 +32,18 @@
     <body>
         <div class="page-inner">
             <div class="page-title">
-                <h1>ゲスト管理ページ</h1>
+                <h1>部屋種類管理ページ</h1>
                 <p>管理者用</p>
                 {{-- このページはユーザー用とは別 --}}
             </div>
             <table>
-                <tr class="table-head"><th>ID</th><th>氏名</th><th>住所</th><th>電話番号</th></tr>
-                    @foreach ($items as $item)
-                        <td id="id-td">{{$item->guest_id}}</td>
-                        <td id="name-td">{{$item->name}}</td>
-                        <td id="name-td">{{$item->address}}</td>
-                        <td id="name-td">{{$item->tel}}</td>
+                <tr class="table-head"><th>番号</th><th>部屋の種類</th><th>制限人数</th></tr>
+                    @foreach ($masters as $item)
+                        <td id="id-td">{{$masters->master_id}}</td>
+                        <td id="name-td">{{$masters->room_name}}</td>
+                        <td id="name-td">{{$masters->imitation}}</td>
                     @endforeach
             </table>
         </div>
     </body>
-    
 </html>

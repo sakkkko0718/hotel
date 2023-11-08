@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Guests;
+use App\Guest;
 use Illuminate\Http\Request;
 
-use Illuminate\Support\Facades\DB;
+// use Illuminate\Support\Facades\DB;
 
 class GuestsController extends Controller
 {
     public function index(Request $request)
     {
-        $items = DB::table('guest')->get();
-        return view('guests.index',['items'=> $items]);
+        $item = Guest::all();
+        return view('guests.index',['guests'=> $item]);
     }
-
 }

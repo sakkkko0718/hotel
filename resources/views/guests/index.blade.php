@@ -38,11 +38,11 @@
             </div>
             <table>
                 <tr class="table-head"><th>ID</th><th>氏名</th><th>住所</th><th>電話番号</th></tr>
-                    @foreach ($items as $item)
-                        <td id="id-td">{{$item->guest_id}}</td>
-                        <td id="name-td">{{$item->name}}</td>
-                        <td id="name-td">{{$item->address}}</td>
-                        <td id="name-td">{{$item->tel}}</td>
+                    @foreach ($guests as $guest)
+                        <td id="id-td">{{$guest->guest_id}}</td>
+                        <td id="name-td">{{$guest->name}}</td>
+                        <td id="name-td">{{$guest->address}}</td>
+                        <td id="name-td">{{$guest->tel}}</td>
                     @endforeach
             </table>
         </div>

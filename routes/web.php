@@ -16,4 +16,3 @@ Route::get('/', function () {
 });
 
 Route::get('guests','GuestsController@index');
-Route::post('guests','GuestsController@post');
