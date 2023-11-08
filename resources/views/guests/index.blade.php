@@ -39,10 +39,12 @@
             <table>
                 <tr class="table-head"><th>ID</th><th>氏名</th><th>住所</th><th>電話番号</th></tr>
                     @foreach ($guests as $guest)
-                        <td id="id-td">{{$guest->guest_id}}</td>
-                        <td id="name-td">{{$guest->name}}</td>
-                        <td id="name-td">{{$guest->address}}</td>
-                        <td id="name-td">{{$guest->tel}}</td>
+                        <tr>
+                            <td>{{$guest->guest_id}}</td>
+                            <td>{{$guest->name}}</td>
+                            <td>{{$guest->address}}</td>
+                            <td>{{$guest->tel}}</td>
+                        </tr>
                     @endforeach
             </table>
         </div>
