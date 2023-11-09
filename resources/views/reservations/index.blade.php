@@ -14,7 +14,8 @@
                 margin: 5px 0 20px 0 ;
             }
             table{
-                width: 90%;
+                width: 1000px;
+                margin: 0 auto;
             }
             th{
                 border: #9FA0A0 solid 1px;
@@ -43,13 +44,7 @@
                     @foreach ($reservations as $reservation)
                     <tr>
                         <td>{{$reservation->reservations_id}}</td>
-                        <td>
-                            @if ($reservation->guests != null)
-                            @foreach ($reservation->guests as $guest)
-                                {{$guest->guest_id}}
-                            @endforeach
-                            @endif
-                        </td>
+                        <td>{{$reservation->guest_id}}</td>
                         <td>{{$reservation->people}}</td>
                         <td>{{$reservation->checkin}}</td>
                         <td>{{$reservation->checkout}}</td>

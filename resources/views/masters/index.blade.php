@@ -14,7 +14,8 @@
                 margin: 5px 0 20px 0 ;
             }
             table{
-                width: 90%;
+                width: 1000px;
+                margin: 0 auto;
             }
             th{
                 border: #9FA0A0 solid 1px;
@@ -37,6 +38,7 @@
                 @csrf
                 <input type="text" name="search"><input type="submit">
                 {{-- ↑未定義 --}}
+                <a href="guests">利用者</a><a href="rooms">部屋</a><a href="reservations">予約</a><a href="details">予約詳細</a>←仮置
             </div>
             <table>
                 <tr class="table-head"><th>部屋管理番号</th><th>部屋の種類</th><th>制限人数</th><th>部屋の名前</th></tr>
@@ -48,7 +50,7 @@
                         <td>
                             @if ($master->rooms != null)
                             @foreach ($master->rooms as $room)
-                                {{$room->room_num}},
+                                {{$room->room_num}}
                             @endforeach
                             @endif
                         </td>

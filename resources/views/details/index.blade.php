@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>お部屋管理</title>
+        <title>予約詳細管理</title>
         <style>
             * {
                 color: #9FA0A0;
@@ -32,19 +32,23 @@
     <body>
         <div class="page-inner">
             <div class="page-title">
-                <h1>部屋管理ページ</h1>
+                <h1>予約詳細管理ページ</h1>
                 <p>管理者用</p>
                 {{-- このページはユーザー用とは別 --}}
             </div>
             <table>
-                <tr class="table-head"><th>部屋の名前</th><th>部屋の写真</th></tr>
-                    @foreach ($rooms as $room)
-                    <tr>
-                        <td>{{$room->room_num}}</td>
-                        <td>いい部屋の写真？</td>
-                    </tr>
+                <tr class="table-head"><th>予約詳細番号</th><th>予約番号</th><th>部屋番号</th><th>宿泊日数</th><th>宿泊料</th></tr>
+                    @foreach ($details as $detail)
+                        <tr>
+                            <td>{{$detail->detail_id}}</td>
+                            <td>{{$detail->reservations_id}}</td>
+                            <td>{{$detail->room_id}}</td>
+                            <td>{{$detail->day}}日間</td>
+                            <td>￥{{$detail->price}}</td>
+                        </tr>
                     @endforeach
             </table>
         </div>
     </body>
+    
 </html>

@@ -22,3 +22,5 @@ Route::get('masters','MastersController@index');
 Route::get('rooms','RoomsController@index');
 
 Route::get('reservations','ReservationsController@index');
+
+Route::get('details','DetailsController@index');

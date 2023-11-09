@@ -14,8 +14,8 @@
                 margin: 5px 0 20px 0 ;
             }
             table{
-                /* background: #9FA0A0; */
-                width: 90%;
+                width: 1000px;
+                margin: 0 auto;
             }
             th{
                 border: #9FA0A0 solid 1px;
