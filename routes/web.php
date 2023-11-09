@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('guests','GuestsController@index');
 
 Route::get('masters','MastersController@index');
+
+Route::get('rooms','RoomsController@index');
+
+Route::get('reservations','ReservationsController@index');

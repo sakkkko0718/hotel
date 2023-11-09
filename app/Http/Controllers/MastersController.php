@@ -11,4 +11,5 @@ class MastersController extends Controller
         $item = Master::all();
         return view('masters.index',['masters'=> $item]);
     }
+
 }

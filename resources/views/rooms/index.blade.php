@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>部屋種別管理</title>
+        <title>お部屋管理</title>
         <style>
             * {
                 color: #9FA0A0;
@@ -31,27 +31,16 @@
     <body>
         <div class="page-inner">
             <div class="page-title">
-                <h1>部屋種類管理ページ</h1>
-                <p>管理者用</p>
+                <h1>部屋の管理ページ</h1>
+                <p></p>
                 {{-- このページはユーザー用とは別 --}}
-                @csrf
-                <input type="text" name="search"><input type="submit">
-                {{-- ↑未定義 --}}
             </div>
             <table>
-                <tr class="table-head"><th>部屋管理番号</th><th>部屋の種類</th><th>制限人数</th><th>部屋の名前</th></tr>
-                    @foreach ($masters as $master)
+                <tr class="table-head"><th>部屋の種類番号</th><th>部屋の名前</th></tr>
+                    @foreach ($rooms as $room)
                     <tr>
-                        <td>{{$master->master_id}}</td>
-                        <td>{{$master->room_name}}</td>
-                        <td>{{$master->imitation}} 名まで</td>
-                        <td>
-                            @if ($master->rooms != null)
-                            @foreach ($master->rooms as $room)
-                                {{$room->room_num}},
-                            @endforeach
-                            @endif
-                        </td>
+                        <td>{{$room->master_id}}</td>
+                        <td>{{$room->room_num}}</td>
                     </tr>
                     @endforeach
             </table>

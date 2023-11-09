@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>お部屋管理</title>
+        <title>予約管理</title>
         <style>
             * {
                 color: #9FA0A0;
@@ -31,17 +31,28 @@
     <body>
         <div class="page-inner">
             <div class="page-title">
-                <h1>部屋の管理ページ</h1>
+                <h1>予約管理ページ</h1>
                 <p>管理者用</p>
                 {{-- このページはユーザー用とは別 --}}
+                @csrf
+                <input type="text" name="search"><input type="submit">
+                {{-- ↑未定義 --}}
             </div>
             <table>
-                <tr class="table-head"><th>部屋管理番号</th><th>部屋の種類</th><th>制限人数</th></tr>
-                    @foreach ($masters as $master)
+                <tr class="table-head"><th>予約者番号</th><th>利用者ID</th><th>人数</th><th>チェックイン</th><th>チェックアウト</th></tr>
+                    @foreach ($reservations as $reservation)
                     <tr>
-                        <td>{{$master->master_id}}</td>
-                        <td>{{$master->room_name}}</td>
-                        <td>{{$master->imitation}} 名まで</td>
+                        <td>{{$reservation->reservations_id}}</td>
+                        <td>
+                            @if ($reservation->guests != null)
+                            @foreach ($reservation->guests as $guest)
+                                {{$guest->guest_id}}
+                            @endforeach
+                            @endif
+                        </td>
+                        <td>{{$reservation->people}}</td>
+                        <td>{{$reservation->checkin}}</td>
+                        <td>{{$reservation->checkout}}</td>
                     </tr>
                     @endforeach
             </table>
