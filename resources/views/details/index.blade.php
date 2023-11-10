@@ -37,11 +37,12 @@
                 {{-- このページはユーザー用とは別 --}}
             </div>
             <table>
-                <tr class="table-head"><th>予約詳細番号</th><th>予約番号</th><th>部屋番号</th><th>宿泊日数</th><th>宿泊料</th></tr>
+                <tr class="table-head"><th>予約詳細番号</th><th>予約番号</th><th>利用者名</th><th>部屋番号</th><th>宿泊日数</th><th>宿泊料</th></tr>
                     @foreach ($details as $detail)
                         <tr>
                             <td>{{$detail->detail_id}}</td>
                             <td>{{$detail->reservations_id}}</td>
+                            <td></td>
                             <td>{{$detail->room_id}}</td>
                             <td>{{$detail->day}}日間</td>
                             <td>￥{{$detail->price}}</td>
