@@ -35,7 +35,10 @@
     <body>
         <div class="page-inner">
             <div class="page-title">
-                <h1>登録</h1>
+                <h1>登録ページ</h1>
+                <p>管理者用</p>
+                {{-- このページはユーザー用とは別 --}}
+                <p>登録する利用者の情報を入力してください。</p>
             </div>
             <form action="/guests/add" method="post">
             <table>

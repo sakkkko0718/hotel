@@ -35,11 +35,9 @@
                 <h1>予約管理ページ</h1>
                 <p>管理者用</p>
                 {{-- このページはユーザー用とは別 --}}
-                @csrf
-                <input type="text" name="search"><input type="submit">
-                {{-- ↑未定義 --}}
             </div>
             <table>
+                @csrf
                 <tr class="table-head"><th>予約者番号</th><th>利用者ID</th><th>利用者名</th><th>電話番号</th><th>人数</th><th>チェックイン</th><th>チェックアウト</th></tr>
                     @foreach ($reservations as $reservation)
                     <tr>
