@@ -33,7 +33,7 @@
         <div class="page-inner">
             <div class="page-title">
                 <h1>ゲスト管理ページ</h1>
-                <p>管理者用</p>
+                <p>管理者用　<a href="/guests/add">追加ページ</a></p>
                 {{-- このページはユーザー用とは別 --}}
             </div>
             <table>
