@@ -42,7 +42,7 @@
             <table>
                 @csrf
                 <tr><th>利用者ID</th>
-                    <td><input type="text" name="guests" value="{{old('guest_id')}}"></td>
+                    <td><input type="text" name="guest_id" value="{{old('guest_id')}}"></td>
                 </tr>
                 {{-- <tr><th>ご希望の部屋</th>
                     <td><select name="room" style="width: 150px">
@@ -62,7 +62,7 @@
                     <td><input type="date" name="checkout" style="width: 150px" value="{{old('checkout')}}"></td>
                 </tr>
             </table>
-            <div class="send"><input type="submit" style="width: 200px" value="予約画面へ進む"></div>
+            <div class="send"><input type="submit" style="width: 150px" value="予約"></div>
             </form>
         </div>
     </body>

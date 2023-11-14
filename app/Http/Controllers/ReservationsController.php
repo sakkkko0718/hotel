@@ -20,10 +20,10 @@ class ReservationsController extends Controller
     public function create(Request $request)
     {
         $this->validate($request, Reservation::$rules);
-        $guest = new Reservation();
+        $reservation = new Reservation();
         $form = $request->all();
         unset($form['_token']);
-        $guest->fill($form)->save();
+        $reservation->fill($form)->save();
         return redirect('/reservations');
     }
 }

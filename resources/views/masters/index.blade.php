@@ -36,8 +36,6 @@
                 <p>管理者用</p>
                 {{-- このページはユーザー用とは別 --}}
                 @csrf
-                <input type="text" name="search"><input type="submit">
-                {{-- ↑未定義 --}}
                 <a href="guests">利用者</a><a href="rooms">部屋</a><a href="reservations">予約</a><a href="details">予約詳細</a>←仮置
             </div>
             <table>
