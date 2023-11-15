@@ -42,7 +42,11 @@
                         <tr>
                             <td>{{$detail->detail_id}}</td>
                             <td>{{$detail->reservations_id}}</td>
-                            <td>{{$detail->room->room_num}}</td>
+                            <td>
+                                @foreach($rooms as $room)
+                                {{$room->room_id}}
+                                @endforeach
+                            </td>
                             <td>{{$detail->room_id}}</td>
                             <td>{{$detail->day}}日間</td>
                             <td>￥{{$detail->price}}</td>
