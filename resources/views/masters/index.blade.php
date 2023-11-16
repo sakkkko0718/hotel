@@ -36,7 +36,7 @@
                 <p>管理者用</p>
                 {{-- このページはユーザー用とは別 --}}
                 @csrf
-                <a href="guests">利用者</a><a href="rooms">部屋</a><a href="reservations">予約</a><a href="details">予約詳細</a>←仮置
+                <a href="guests">利用者</a><a href="rooms">部屋</a><a href="reservations">予約</a>←仮置
             </div>
             <table>
                 <tr class="table-head"><th>部屋管理番号</th><th>部屋の種類</th><th>制限人数</th><th>部屋の名前</th></tr>

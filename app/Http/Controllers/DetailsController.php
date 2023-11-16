@@ -10,7 +10,6 @@ class DetailsController extends Controller
 {
     public function index(Request $request)
     {
-        $rooms = Room::all();
         return view('details.index');
     }
 }

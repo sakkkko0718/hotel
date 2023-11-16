@@ -31,5 +31,3 @@ Route::get('reservations','ReservationsController@index');
 
 Route::get('reservations/add','ReservationsController@add');
 Route::post('reservations/add','ReservationsController@create');
-
-Route::get('details','DetailsController@index');
