@@ -8,7 +8,7 @@
                 max-width: 1200vh;
             }
             .page-inner{
-                width: 90%;
+                width: 100%;
             }
             .page-title{
                 margin: 5px 0 20px 0 ;
@@ -16,11 +16,12 @@
             table{
                 width: 1300px;
                 margin: 0 auto;
+                font-size: 15px;
             }
             th{
                 border: #9FA0A0 solid 1px;
                 padding: 10px 30px;
-                width: 300px;
+                /* width: 300px; */
             }
             td{
                 border: #9FA0A0 solid 1px;
@@ -38,7 +39,7 @@
             </div>
             <table>
                 @csrf
-                <tr class="table-head"><th>予約者番号</th><th>利用者ID</th><th>利用者名</th><th>住所</th><th>電話番号</th><th>人数</th><th>チェックイン</th><th>チェックアウト</th><th>宿泊日数</th><th>料金</th></tr>
+                <tr class="table-head"><th>予約者番号</th><th>利用者ID</th><th>利用者名</th><th>住所</th><th>電話番号</th><th>人数</th><th>チェックイン</th><th>チェックアウト</th><th>部屋のタイプ</th><th>宿泊日数</th><th>料金</th></tr>
                     @foreach ($reservations as $reservation)
                     <tr>
                         <td>{{$reservation->reservation_id}}</td>
@@ -51,6 +52,7 @@
                         <td>{{$reservation->checkout}}</td>
                         
                         @foreach($reservation->room as $room)
+                            <td>{{$room->room_num}}</td>
                             <td>{{$room->pivot->day}}日</td>
                             <td>￥{{$room->pivot->price}}</td>
                         @endforeach

@@ -9,7 +9,7 @@ class ReservationsController extends Controller
 {
     public function index(Request $request){
         $item = Reservation::all();
-        dd($item[0]->room);
+        // dd($item[0]->room);
         // $data = Reservation::with('guests')->get();
         return view('reservations.index',['reservations'=> $item]);
     }
@@ -25,6 +25,6 @@ class ReservationsController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $reservation->fill($form)->save();
-        return redirect('/reservations');
+        return redirect('/rooms.add');
     }
 }

@@ -13,7 +13,7 @@ class Reservation extends Model
         'people' => 'required',
         'checkin' => 'required',
         'checkout' => 'required'
-    );
+        );
 
     protected $primaryKey = 'reservation_id';
 

@@ -26,6 +26,7 @@ Route::post('guests/add','GuestsController@create');
 Route::get('masters','MastersController@index');
 
 Route::get('rooms','RoomsController@index');
+Route::get('rooms/add','RoomsController@add');
 
 Route::get('reservations','ReservationsController@index');
 
