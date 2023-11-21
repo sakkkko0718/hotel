@@ -32,3 +32,6 @@ Route::get('reservations','ReservationsController@index');
 
 Route::get('reservations/add','ReservationsController@add');
 Route::post('reservations/add','ReservationsController@create');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
