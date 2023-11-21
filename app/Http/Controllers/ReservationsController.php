@@ -25,6 +25,6 @@ class ReservationsController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $reservation->fill($form)->save();
-        return redirect('/rooms.add');
+        return redirect('/reservations');
     }
 }

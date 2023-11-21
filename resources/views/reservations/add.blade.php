@@ -1,36 +1,4 @@
-<html>
-    <head>
-        <title>予約管理</title>
-        <style>
-            * {
-                color: #9FA0A0;
-                margin: 10px;
-                max-width: 1200vh;
-            }
-            .page-inner{
-                width: 90%;
-            }
-            .page-title{
-                margin: 5px 0 20px 0 ;
-            }
-            table{
-                width: 1000px;
-                margin: 0 auto;
-            }
-            th{
-                border: #9FA0A0 solid 1px;
-                padding: 10px 30px;
-                width: 300px;
-            }
-            td{
-                border: #9FA0A0 solid 1px;
-                padding: 5px 10px;
-            }
-            .send{
-                text-align: center
-            }
-        </style>
-    </head>
+@extends('layouts.hotelapp')
 
     <body>
         <div class="page-inner">
@@ -58,4 +26,3 @@
             </form>
         </div>
     </body>
-</html>
